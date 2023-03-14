@@ -24,9 +24,9 @@ jobs:
                PATCH="${BASH_REMATCH[3]}"
 
                TAGS="${{ secrets.DOCKER_IMAGE }}:latest"
-               TAGS="${TAGS},${{ secrets.DOCKER_IMAGE }}:${MAJOR}"
-               TAGS="${TAGS},${{ secrets.DOCKER_IMAGE }}:${MAJOR}.${MINOR}"
-               TAGS="${TAGS},${{ secrets.DOCKER_IMAGE }}:${MAJOR}.${MINOR}.${PATCH}"
+               TAGS="${TAGS},${{ secrets.DOCKER_IMAGE }}:v${MAJOR}"
+               TAGS="${TAGS},${{ secrets.DOCKER_IMAGE }}:v${MAJOR}.${MINOR}"
+               TAGS="${TAGS},${{ secrets.DOCKER_IMAGE }}:v${MAJOR}.${MINOR}.${PATCH}"
             else
                TAGS="${{ secrets.DOCKER_IMAGE }}:${VERSION}"
             fi
